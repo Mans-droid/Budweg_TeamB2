@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="Budweg/Budweg.sqlproj" Id="755c0226-d46e-4ef7-b8af-384bedc53922">
+    <Build />
+    <Deploy />
+  </Project>
+  <Project Path="Budweg_Console/Budweg_Console.csproj" />
+  <Project Path="Budweg_WPF/Budweg_WPF.csproj" />
+</Solution>
