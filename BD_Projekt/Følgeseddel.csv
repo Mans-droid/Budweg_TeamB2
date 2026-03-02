@@ -1,0 +1,6 @@
+WorkorderID;intake;Wast;intake_forward;intake_backwards;station;EmployeeID
+1;30;0;30;0;Montage;1
+2;40;7;25;15;Rengøring;3
+3;10;8;7;3;Pakkeri;4
+4;12;9;11;1;Lager;5
+5;15;2;13;0;Montage;2
