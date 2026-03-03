@@ -4,6 +4,16 @@
              xmlns:local="clr-namespace:Budweg_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Window">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="19"/>            
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="SteelBlue"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="#FF00AC58"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>        
     </Application.Resources>
 </Application>

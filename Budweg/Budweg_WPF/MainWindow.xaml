@@ -5,8 +5,281 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Budweg_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Følgeseddeler" Height="720" Width="1280"
+        Background= "White">
     <Grid>
+        <ListBox Margin="30" >
+            <StackPanel Orientation="Horizontal" >
+                <Label FontWeight="Bold" FontSize="60" Foreground="#FF00AC58" Margin="0" >
+                    Budweg
+                </Label>
+                <Label Margin="20,14,0,0" FontSize="45" FontWeight="Bold" Foreground="Black">
+                    Produktions Overblik
+                </Label>
+                <Button Margin="10,20" HorizontalAlignment="Right" Width="100">
+                    Retur
+                </Button>
+                <Button Margin="10,20" HorizontalAlignment="Right" Width="100">
+                    Søg
+                </Button>
+                <Button Margin="10,20" HorizontalAlignment="Right" Width="100">
+                    Rediger
+                </Button>
+                <Button Margin="10,20" HorizontalAlignment="Right" Width="100" Background="DarkRed"
+                        >
+                    Slet
+                </Button>
+            </StackPanel>
+        </ListBox>
+        <Border Background= "Black" BorderBrush="BLACK" BorderThickness="2" Margin="0,120,0,0" Height="560" Width="1260">
+            <ListBox Background="#FF00AC58" Margin="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+                <ListBox.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="White"/>
+                    </Style>
+                </ListBox.Resources>
+                <Expander>
+                    <Expander.Header>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontWeight="SemiBold">
+                                FølgeseddelNr:
+                            </TextBlock>
+                            <TextBlock Margin="10,0,0,0">
+                                1232632
+                            </TextBlock>
+                            <TextBlock Margin="20,0,0,0" FontWeight="SemiBold">
+                                OrdreNr:
+                            </TextBlock>
+                            <TextBlock Margin="10,0,0,0">
+                                2376
+                            </TextBlock>
+                        </StackPanel>
+                    </Expander.Header>
+                    <StackPanel Margin="0,10,0,0">
+                        <StackPanel>
+                            <WrapPanel Margin="0,10,0,0" >
+                            <TextBlock Width="70" FontWeight="SemiBold">
+                            Station:
+                            </TextBlock>
+                            <TextBlock Width="210" Margin="10,0,0,0" >
+                            Rengøring
+                            </TextBlock>
+                            <TextBlock Width="110" Grid.Row="0" Grid.Column="2" Margin="20,0,0,0" FontWeight="Bold">
+                             Dato/Tid ind:
+                            </TextBlock>
+                            <TextBlock Width="170" Margin="10,0,0,0">
+                             12:00 - 24/12-2025
+                            </TextBlock>
+                            <TextBlock Width="110" Grid.Row="0" Grid.Column="4" Margin="20,0,0,0" FontWeight="Bold">
+                             Dato/Tid ud:
+                            </TextBlock>
+                            <TextBlock Width="170" Margin="10,0,0,0">
+                             12:35 - 24/12-2025
+                            </TextBlock>
+                            <TextBlock Width="90" Grid.Row="0" Grid.Column="6" Margin="20,0,0,0" FontWeight="Bold">
+                            Ansvarlig:
+                            </TextBlock>
+                            <TextBlock Width="190" Margin="10,0,0,0">
+                            Pia Kjærsgaard
+                            </TextBlock>
+                        </WrapPanel>
 
+                        <WrapPanel>
+                            <TextBlock Width="70" Grid.Row="1" Grid.Column="0" FontWeight="Bold">
+                                Tilgang:
+                            </TextBlock>
+                            <TextBlock Width="210" Margin="10,0,0,0">
+                                30
+                            </TextBlock>
+                            <TextBlock Width="110" Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" FontWeight="Bold">
+                                Afgang frem:
+                            </TextBlock>
+                            <TextBlock Width="170" Margin="10,0,0,0">
+                                20
+                            </TextBlock>
+                            <TextBlock Width="130" Grid.Row="1" Grid.Column="4" Margin="20,0,0,0" FontWeight="Bold">
+                                Afgang tilbage:
+                            </TextBlock>
+                            <TextBlock Width="150" Margin="10,0,0,0">
+                                2
+                            </TextBlock>
+                            <TextBlock Width="50" Grid.Row="1" Grid.Column="6"  Margin="20,0,0,0" FontWeight="Bold">
+                                Spild:
+                            </TextBlock>
+                            <TextBlock Width="2300" Margin="10,0,0,0">
+                                8
+                            </TextBlock>
+                        </WrapPanel>
+                            </StackPanel>
+                       <!--Nok en bedre måde at gøre det på end at copy past-->
+                        <StackPanel>
+                            <WrapPanel Margin="0,10,0,0" >
+                                <TextBlock Width="70" FontWeight="SemiBold">
+      Station:
+                                </TextBlock>
+                                <TextBlock Width="210" Margin="10,0,0,0" >
+      Rengøring
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="0" Grid.Column="2" Margin="20,0,0,0" FontWeight="Bold">
+       Dato/Tid ind:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+       12:00 - 24/12-2025
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="0" Grid.Column="4" Margin="20,0,0,0" FontWeight="Bold">
+       Dato/Tid ud:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+       12:35 - 24/12-2025
+                                </TextBlock>
+                                <TextBlock Width="90" Grid.Row="0" Grid.Column="6" Margin="20,0,0,0" FontWeight="Bold">
+      Ansvarlig:
+                                </TextBlock>
+                                <TextBlock Width="190" Margin="10,0,0,0">
+      Pia Kjærsgaard
+                                </TextBlock>
+                            </WrapPanel>
+
+                            <WrapPanel>
+                                <TextBlock Width="70" Grid.Row="1" Grid.Column="0" FontWeight="Bold">
+          Tilgang:
+                                </TextBlock>
+                                <TextBlock Width="210" Margin="10,0,0,0">
+          30
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" FontWeight="Bold">
+          Afgang frem:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+          20
+                                </TextBlock>
+                                <TextBlock Width="130" Grid.Row="1" Grid.Column="4" Margin="20,0,0,0" FontWeight="Bold">
+          Afgang tilbage:
+                                </TextBlock>
+                                <TextBlock Width="150" Margin="10,0,0,0">
+          2
+                                </TextBlock>
+                                <TextBlock Width="50" Grid.Row="1" Grid.Column="6"  Margin="20,0,0,0" FontWeight="Bold">
+          Spild:
+                                </TextBlock>
+                                <TextBlock Width="2300" Margin="10,0,0,0">
+          8
+                                </TextBlock>
+                            </WrapPanel>
+                        </StackPanel>
+                        <StackPanel>
+                            <WrapPanel Margin="0,10,0,0" >
+                                <TextBlock Width="70" FontWeight="SemiBold">
+      Station:
+                                </TextBlock>
+                                <TextBlock Width="210" Margin="10,0,0,0" >
+      Rengøring
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="0" Grid.Column="2" Margin="20,0,0,0" FontWeight="Bold">
+       Dato/Tid ind:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+       12:00 - 24/12-2025
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="0" Grid.Column="4" Margin="20,0,0,0" FontWeight="Bold">
+       Dato/Tid ud:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+       12:35 - 24/12-2025
+                                </TextBlock>
+                                <TextBlock Width="90" Grid.Row="0" Grid.Column="6" Margin="20,0,0,0" FontWeight="Bold">
+      Ansvarlig:
+                                </TextBlock>
+                                <TextBlock Width="190" Margin="10,0,0,0">
+      Pia Kjærsgaard
+                                </TextBlock>
+                            </WrapPanel>
+
+                            <WrapPanel>
+                                <TextBlock Width="70" Grid.Row="1" Grid.Column="0" FontWeight="Bold">
+          Tilgang:
+                                </TextBlock>
+                                <TextBlock Width="210" Margin="10,0,0,0">
+          30
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" FontWeight="Bold">
+          Afgang frem:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+          20
+                                </TextBlock>
+                                <TextBlock Width="130" Grid.Row="1" Grid.Column="4" Margin="20,0,0,0" FontWeight="Bold">
+          Afgang tilbage:
+                                </TextBlock>
+                                <TextBlock Width="150" Margin="10,0,0,0">
+          2
+                                </TextBlock>
+                                <TextBlock Width="50" Grid.Row="1" Grid.Column="6"  Margin="20,0,0,0" FontWeight="Bold">
+          Spild:
+                                </TextBlock>
+                                <TextBlock Width="2300" Margin="10,0,0,0">
+          8
+                                </TextBlock>
+                            </WrapPanel>
+                        </StackPanel>
+                        <StackPanel>
+                            <WrapPanel Margin="0,10,0,0" >
+                                <TextBlock Width="70" FontWeight="SemiBold">
+      Station:
+                                </TextBlock>
+                                <TextBlock Width="210" Margin="10,0,0,0" >
+      Rengøring
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="0" Grid.Column="2" Margin="20,0,0,0" FontWeight="Bold">
+       Dato/Tid ind:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+       12:00 - 24/12-2025
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="0" Grid.Column="4" Margin="20,0,0,0" FontWeight="Bold">
+       Dato/Tid ud:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+       12:35 - 24/12-2025
+                                </TextBlock>
+                                <TextBlock Width="90" Grid.Row="0" Grid.Column="6" Margin="20,0,0,0" FontWeight="Bold">
+      Ansvarlig:
+                                </TextBlock>
+                                <TextBlock Width="190" Margin="10,0,0,0">
+      Pia Kjærsgaard
+                                </TextBlock>
+                            </WrapPanel>
+
+                            <WrapPanel>
+                                <TextBlock Width="70" Grid.Row="1" Grid.Column="0" FontWeight="Bold">
+          Tilgang:
+                                </TextBlock>
+                                <TextBlock Width="210" Margin="10,0,0,0">
+          30
+                                </TextBlock>
+                                <TextBlock Width="110" Grid.Row="1" Grid.Column="2" Margin="20,0,0,0" FontWeight="Bold">
+          Afgang frem:
+                                </TextBlock>
+                                <TextBlock Width="170" Margin="10,0,0,0">
+          20
+                                </TextBlock>
+                                <TextBlock Width="130" Grid.Row="1" Grid.Column="4" Margin="20,0,0,0" FontWeight="Bold">
+          Afgang tilbage:
+                                </TextBlock>
+                                <TextBlock Width="150" Margin="10,0,0,0">
+          2
+                                </TextBlock>
+                                <TextBlock Width="50" Grid.Row="1" Grid.Column="6"  Margin="20,0,0,0" FontWeight="Bold">
+          Spild:
+                                </TextBlock>
+                                <TextBlock Width="2300" Margin="10,0,0,0">
+          8
+                                </TextBlock>
+                            </WrapPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </Expander>
+            </ListBox>
+        </Border>
     </Grid>
 </Window>
