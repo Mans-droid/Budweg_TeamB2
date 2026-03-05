@@ -4,10 +4,12 @@
              xmlns:local="clr-namespace:Budweg_WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <!--Sætter styles for alle wpf elementer-->
         <Style TargetType="Window">
             <Setter Property="FontFamily" Value="Arial"/>
             <Setter Property="FontSize" Value="19"/>            
         </Style>
+        <!--Sætter styles for alle wpf buttons-->
         <Style TargetType="Button">
             <Setter Property="Background" Value="SteelBlue"/>
             <Setter Property="FontSize" Value="20"/>
