@@ -7,7 +7,7 @@
         <!--Sætter styles for alle wpf elementer-->
         <Style TargetType="Window">
             <Setter Property="FontFamily" Value="Arial"/>
-            <Setter Property="FontSize" Value="19"/>            
+            <Setter Property="FontSize" Value="19"/>
         </Style>
         <!--Sætter styles for alle wpf buttons-->
         <Style TargetType="Button">
@@ -16,6 +16,6 @@
             <Setter Property="Padding" Value="10"/>
             <Setter Property="Background" Value="#FF00AC58"/>
             <Setter Property="Foreground" Value="White"/>
-        </Style>        
+        </Style>     
     </Application.Resources>
 </Application>

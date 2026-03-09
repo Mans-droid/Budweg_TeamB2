@@ -38,7 +38,7 @@ namespace Budweg_WPF
 
         private void btnRetur_Click(object sender, RoutedEventArgs e)
         {
-            var secondWindow = new Menu();
+            var secondWindow = new MainWindow();
             secondWindow.Show();
 
             this.Close(); // lukker

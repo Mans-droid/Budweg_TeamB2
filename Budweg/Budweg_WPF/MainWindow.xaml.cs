@@ -15,10 +15,18 @@ namespace Budweg_WPF
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    {
+    {    
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnProduktionsOverblik_Click(object sender, RoutedEventArgs e)
+        {
+            var secondWindow = new ProduktionsOverblik();
+            secondWindow.Show();
+
+            this.Hide(); // Hide instead of Close
         }
     }
 }

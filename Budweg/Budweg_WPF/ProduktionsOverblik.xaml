@@ -8,8 +8,7 @@
         Title="Produktions Overblik" Height="720" Width="1280"
         Background= "White">
     <Grid>
-        <ListBox Margin="30" >
-            <!--Top Bar-->
+        <Grid Margin="30" VerticalAlignment="Top">                
             <StackPanel Orientation="Horizontal" >
                 <Label FontWeight="Bold" FontSize="60" Foreground="#FF00AC58" Margin="0" >
                     Budweg
@@ -30,8 +29,8 @@
                     Slet
                 </Button>
             </StackPanel>
-        </ListBox>
-        <Border Background="#FF00AC58" BorderBrush="BLACK" BorderThickness="2" Margin="0,120,0,0" Height="560" Width="1260">
+        </Grid>
+        <Border Background="#FF00AC58" BorderBrush="BLACK" BorderThickness="2" Margin="20,120,20,20">
             <StackPanel>
                 <!--Flere af denne list box, for flere følgeseddler-->
                 <ListBox ItemsSource="{Binding WorkOrderNr}" Background="#FF00AC58" Margin="0" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
@@ -56,6 +55,7 @@
                                 </StackPanel>
                             </Expander.Header>
                             <ListBox Background="#FF00AC58" ItemsSource="{Binding StationID}">
+                                
                                 <StackPanel>
                                     <WrapPanel Margin="0,10,0,0" >
                                         <TextBlock Width="70" FontWeight="SemiBold">

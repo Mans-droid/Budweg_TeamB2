@@ -5,7 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Budweg_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="Menu" Height="720" Width="1280">
     <Grid>
+        <Grid Margin="30">
+            <StackPanel  Focusable="False"  Width="1210" Orientation="Vertical">
+                <Label FontWeight="Bold" FontSize="100" Foreground="#FF00AC58" Margin="0" HorizontalAlignment="Center" >
+                    Budweg
+                </Label>
+                <Label Margin="0,50,0,0" FontSize="60" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center">
+                    Menu
+                </Label>
+                <Button Margin="0,70,0,0" Width="400" FontSize="40">
+                    Opret Følgeseddel
+                </Button>
+                <Button x:Name="btnProduktionsOverblik" Margin="0,50,0,0" Width="400" FontSize="40" Click="BtnProduktionsOverblik_Click">
+                    Produktions Overblik
+                </Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

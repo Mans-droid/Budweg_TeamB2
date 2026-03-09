@@ -1,4 +1,8 @@
---create database BudwegDB
+create database BudwegDB
+GO
+
+USE BudwegDB;
+GO
 
 CREATE TABLE følgeseddel
 (
