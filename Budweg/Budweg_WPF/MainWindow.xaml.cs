@@ -20,13 +20,13 @@ namespace Budweg_WPF
         {
             InitializeComponent();
         }
-
+        //Åbner ProduktionsOverblik og lukker dette vindue, måske bruge pages istedet for Window (kan måske gøre så der ikke åbnes og lukkes vinduer, har ikke tjekket det ud)
         private void BtnProduktionsOverblik_Click(object sender, RoutedEventArgs e)
         {
             var secondWindow = new ProduktionsOverblik();
             secondWindow.Show();
 
-            this.Hide(); // Hide instead of Close
+            this.Close(); 
         }
     }
 }
