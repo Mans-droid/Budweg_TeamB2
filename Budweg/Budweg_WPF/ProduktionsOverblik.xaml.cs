@@ -11,7 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.ComponentModel;
 namespace Budweg_WPF
 {
     /// <summary>
@@ -20,6 +20,7 @@ namespace Budweg_WPF
 
     public partial class ProduktionsOverblik : Window
     {
+        private ICollectionView WorkOrdersView;
         //ObservableCollection er en liste der bruges til data binding med UI i xaml eks. "{Binding WorkOrders}"
         public ObservableCollection<WorkOrder> WorkOrders { get; set; } = new ObservableCollection<WorkOrder>();
 
@@ -135,8 +136,31 @@ namespace Budweg_WPF
 
             }
             });
+            //filters til søg
+            WorkOrdersView = CollectionViewSource.GetDefaultView(WorkOrders);
+            WorkOrdersView.Filter = FilterWorkOrders;
 
             DataContext = this; // set bindings
+        }
+        //filter søg
+        private bool FilterWorkOrders(object obj)
+        {
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+                return true;
+
+            if (obj is WorkOrder workOrder)
+            {
+                string search = txtSearch.Text.ToLower();
+
+                return workOrder.WorkOrderNr.ToString().Contains(search)
+                    || workOrder.OrderNr.ToString().Contains(search);
+            }
+
+            return false;
+        }
+        private void txtSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            WorkOrdersView.Refresh();
         }
         //Return knap
         private void btnRetur_Click(object sender, RoutedEventArgs e)
@@ -162,6 +186,7 @@ namespace Budweg_WPF
 
         public class WorkOrder
         {
+
             public int WorkOrderNr { get; set; }
             public int OrderNr { get; set; }
             public List<Station> StationID { get; set; }

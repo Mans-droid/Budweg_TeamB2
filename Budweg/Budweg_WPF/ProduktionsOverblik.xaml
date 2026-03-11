@@ -21,9 +21,12 @@
                 <Button  x:Name="btnRetur" Margin="10,20" HorizontalAlignment="Right" Width="100" Click="btnRetur_Click">
                     Retur
                 </Button>
-                <Button x:Name="btnSøg" Margin="10,20" HorizontalAlignment="Right" Width="100">
+                <TextBox x:Name="txtSearch" Width="100" Margin="10,20" TextChanged="txtSearch_TextChanged" Background="#FF00AC58" Foreground="White" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+                    
+                </TextBox>
+                <!--<Button x:Name="btnSøg" Margin="10,20" HorizontalAlignment="Right" Width="100">
                     Søg
-                </Button>
+                </Button>-->
                 <Button x:Name="BtnRediger" Margin="10,20" HorizontalAlignment="Right" Width="100">
                     Rediger
                 </Button>
